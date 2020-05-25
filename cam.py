@@ -17,16 +17,34 @@ CFG = { 'artifactory': { 'ce': 'https://ci-artifactory.corda.r3cev.com/artifacto
         'packages':
         [
             {
-            'name': 'corda-{version}.jar',
-            'repo_type': 'ce',
-            'alias': ['corda', 'ce corda'],
-            'link': 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-enterprise/com/r3/corda/corda/{version}/corda-{version}.jar'
+                'name': 'corda-{version}.jar',
+                'repo_type': 'ce',
+                'alias': ['corda', 'cecorda'],
+                'link': 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-enterprise/com/r3/corda/corda/{version}/corda-{version}.jar'
             },
             {
-            'name': 'tools-database-manager-{version}.jar',
-            'repo_type': 'ce',
-            'alias': ['database-manager', 'tools-database-manager', 'dbmtool'],
-            'link': 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-enterprise/com/r3/corda/tools-database-manager/{version}/tools-database-manager-{version}.jar'
+                'name': 'corda-tools-network-bootstrapper-{version}.jar',
+                'repo_type': 'ce',
+                'alias': ['tools-network-bootstrapper', 'corda-tools-network-bootstrapper', 'network-bootstrapper', 'bootstrapper'],
+                'link': 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-enterprise/com/r3/corda/corda-tools-network-bootstrapper/{version}/corda-tools-network-bootstrapper-{version}.jar'
+            },
+            {
+                'name': 'tools-database-manager-{version}.jar',
+                'repo_type': 'ce',
+                'alias': ['database-manager', 'tools-database-manager', 'dbmtool'],
+                'link': 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-enterprise/com/r3/corda/tools-database-manager/{version}/tools-database-manager-{version}.jar'
+            },
+            {
+                'name': 'corda-finance-workflows-{version}.jar',
+                'repo_type': 'ce',
+                'alias': ['corda-finance-workflows', 'finance-workflows', 'workflows'],
+                'link': 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-enterprise/com/r3/corda/corda-finance-workflows/{version}/corda-finance-workflows-{version}.jar'
+            },
+            {
+                'name': 'corda-finance-contracts-{version}.jar',
+                'repo_type': 'os',
+                'alias': ['corda-finance-contracts', 'finance-contracts', 'contracts'],
+                'link': 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-releases/net/corda/corda-finance-contracts/{version}/corda-finance-contracts-{version}.jar'
             }
         ]
     }
@@ -34,7 +52,7 @@ CFG = { 'artifactory': { 'ce': 'https://ci-artifactory.corda.r3cev.com/artifacto
 
 logging.basicConfig(
     format='%(asctime)s | %(levelname)s | %(message)s',
-    filename=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'rpc-client.log'),
+    filename=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'cam.log'),
     level=logging.INFO)
 # Adding STDERR output
 logging.getLogger().addHandler(logging.StreamHandler())
