@@ -45,6 +45,12 @@ CFG = { 'artifactory': { 'ce': 'https://ci-artifactory.corda.r3cev.com/artifacto
                 'repo_type': 'os',
                 'alias': ['corda-finance-contracts', 'finance-contracts', 'contracts'],
                 'link': 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-releases/net/corda/corda-finance-contracts/{version}/corda-finance-contracts-{version}.jar'
+            },
+            {
+                'name': 'corda-testserver-{version}.jar',
+                'repo_type': 'ce',
+                'alias': ['testserver'],
+                'link': 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-enterprise/com/r3/corda/corda-testserver/{version}/corda-testserver-{version}.jar'
             }
         ]
     }
