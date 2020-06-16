@@ -29,6 +29,12 @@ CFG = { 'artifactory': { 'ce': 'https://ci-artifactory.corda.r3cev.com/artifacto
                 'link': 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-enterprise/com/r3/corda/corda-tools-network-bootstrapper/{version}/corda-tools-network-bootstrapper-{version}.jar'
             },
             {
+                'name': 'corda-tools-ha-utilities-{version}.jar',
+                'repo_type': 'ce',
+                'alias': ['corda-tools-ha-utilities', 'tools-ha-utilities', 'ha-utilities', 'ha-utils', 'hautilities', 'hautils'],
+                'link': 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-enterprise/com/r3/corda/corda-tools-ha-utilities/{version}/corda-tools-ha-utilities-{version}.jar'
+            },
+            {
                 'name': 'tools-database-manager-{version}.jar',
                 'repo_type': 'ce',
                 'alias': ['database-manager', 'tools-database-manager', 'dbmtool'],
@@ -51,6 +57,12 @@ CFG = { 'artifactory': { 'ce': 'https://ci-artifactory.corda.r3cev.com/artifacto
                 'repo_type': 'ce',
                 'alias': ['testserver'],
                 'link': 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-enterprise/com/r3/corda/corda-testserver/{version}/corda-testserver-{version}.jar'
+            },
+            {
+                'name': 'pki-tool-{version}.zip',
+                'repo_type': 'enm',
+                'alias': ['pki-tool', 'pkitool'],
+                'link': 'https://software.r3.com/artifactory/r3-enterprise-network-manager/com/r3/enm/tools/pki-tool/{version}/pki-tool-{version}.zip'
             }
         ]
     }
