@@ -63,6 +63,24 @@ CFG = { 'artifactory': { 'ce': 'https://ci-artifactory.corda.r3cev.com/artifacto
                 'repo_type': 'enm',
                 'alias': ['pki-tool', 'pkitool'],
                 'link': 'https://software.r3.com/artifactory/r3-enterprise-network-manager/com/r3/enm/tools/pki-tool/{version}/pki-tool-{version}.zip'
+            },
+            {
+                'name': 'identitymanager-{version}.zip',
+                'repo_type': 'enm',
+                'alias': ['identitymanager', 'idman'],
+                'link': 'https://software.r3.com/artifactory/r3-enterprise-network-manager/com/r3/enm/services/identitymanager/{version}/identitymanager-{version}.zip'
+            },
+            {
+                'name': 'signer-{version}.zip',
+                'repo_type': 'enm',
+                'alias': ['signer'],
+                'link': 'https://software.r3.com/artifactory/r3-enterprise-network-manager/com/r3/enm/services/signer/{version}/signer-{version}.zip'
+            },
+            {
+                'name': 'networkmap-{version}.zip',
+                'repo_type': 'enm',
+                'alias': ['networkmap', 'nm'],
+                'link': 'https://software.r3.com/artifactory/r3-enterprise-network-manager/com/r3/enm/services/networkmap/{version}/networkmap-{version}.zip'
             }
         ]
     }
@@ -86,6 +104,7 @@ def main():
     parser.add_argument('-u', '--corda-artifactory-username', help='CORDA_ARTIFACTORY_USERNAME', default=None)
     parser.add_argument('-p', '--corda-artifactory-password', help='CORDA_ARTIFACTORY_PASSWORD', default=None)
     parser.add_argument('-s', '--corda-storage', help='Storage location', default='{0}'.format(os.path.join(str(Path.home()), 'corda_jars_storage')))
+    parser.add_argument('-c', '--current-storage', help='Store to current folder', action='store_true')
 
     args = parser.parse_args()
     CORDA_ARTIFACTORY_USERNAME = os.getenv('CORDA_ARTIFACTORY_USERNAME', args.corda_artifactory_username)
@@ -127,7 +146,7 @@ def main():
             targets[0]['name'].format(**{'version': version})
         ))
         full_jar_name = targets[0]['name'].format(**{'version': version})
-        jar = os.path.join(args.corda_storage, targets[0]['repo_type'], full_jar_name)
+        jar = os.path.join(args.corda_storage, targets[0]['repo_type'], full_jar_name) if not args.current_storage else full_jar_name
         Path(os.path.join(args.corda_storage, targets[0]['repo_type'])).mkdir(parents=True, exist_ok=True)
         if not os.path.exists(jar):
             url = targets[0]['link'].format(**{'version': version})
