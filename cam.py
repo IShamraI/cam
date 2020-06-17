@@ -81,6 +81,42 @@ CFG = { 'artifactory': { 'ce': 'https://ci-artifactory.corda.r3cev.com/artifacto
                 'repo_type': 'enm',
                 'alias': ['networkmap', 'nm'],
                 'link': 'https://software.r3.com/artifactory/r3-enterprise-network-manager/com/r3/enm/services/networkmap/{version}/networkmap-{version}.zip'
+            },
+            {
+                'name': 'smr-{version}.zip',
+                'repo_type': 'enm',
+                'alias': ['smr'],
+                'link': 'https://software.r3.com/artifactory/r3-enterprise-network-manager/com/r3/enm/services/smr/{version}/smr-{version}.zip'
+            },
+            {
+                'name': 'angel-{version}.zip',
+                'repo_type': 'enm',
+                'alias': ['angel'],
+                'link': 'https://software.r3.com/artifactory/r3-enterprise-network-manager/com/r3/enm/services/angel/{version}/angel-{version}.zip'
+            },
+            {
+                'name': 'auth-{version}.zip',
+                'repo_type': 'enm',
+                'alias': ['auth'],
+                'link': 'https://software.r3.com/artifactory/r3-enterprise-network-manager/com/r3/enm/services/auth/{version}/auth-{version}.zip'
+            },
+            {
+                'name': 'bundled-{version}.zip',
+                'repo_type': 'enm',
+                'alias': ['bundled'],
+                'link': 'https://software.r3.com/artifactory/r3-enterprise-network-manager/com/r3/enm/services/bundled/{version}/bundled-{version}.zip'
+            },
+            {
+                'name': 'zone-{version}.zip',
+                'repo_type': 'enm',
+                'alias': ['zone'],
+                'link': 'https://software.r3.com/artifactory/r3-enterprise-network-manager/com/r3/enm/services/zone/{version}/zone-{version}.zip'
+            },
+            {
+                'name': 'zoneservice-{version}.zip',
+                'repo_type': 'enm',
+                'alias': ['zoneservice'],
+                'link': 'https://software.r3.com/artifactory/r3-enterprise-network-manager/com/r3/enm/services/zoneservice/{version}/zoneservice-{version}.zip'
             }
         ]
     }
