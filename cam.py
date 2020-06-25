@@ -23,6 +23,12 @@ CFG = { 'artifactory': { 'ce': 'https://ci-artifactory.corda.r3cev.com/artifacto
                 'link': 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-enterprise/com/r3/corda/corda/{version}/corda-{version}.jar'
             },
             {
+                'name': '',
+                'repo_type': 'ce',
+                'alias': ['jmeter', 'corda-jmeter', 'jmeter-corda'],
+                'link': 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-enterprise/com/r3/corda/jmeter-corda/{version}/jmeter-corda-{version}-testsuite.zip'
+            },
+            {
                 'name': 'corda-tools-network-bootstrapper-{version}.jar',
                 'repo_type': 'ce',
                 'alias': ['tools-network-bootstrapper', 'corda-tools-network-bootstrapper', 'network-bootstrapper', 'bootstrapper'],
