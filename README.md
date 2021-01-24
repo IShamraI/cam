@@ -8,7 +8,7 @@ $ mkdir -p ~/bin ; wget https://raw.githubusercontent.com/IShamraI/cam/master/ca
 
 ## How to use
 
-Actualt help will e printed by -h key:
+Actual help will be printed by `-h` key:
 ```
 $ cam -h
 ```
